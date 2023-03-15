@@ -1,0 +1,147 @@
+.grid-container{
+    display: grid;
+    margin: auto;
+    width: 1000px;
+    height: 1000px;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+     ". . Bio1 ."
+     "Bio4 Bio4 Bio1 ."
+     ". Bio3 Bio2 Bio2"
+     ". Bio3 . .";
+
+}
+
+.grid-container div{
+    display: flex;
+}
+
+
+.bio1{
+    grid-area: Bio1;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+.bio2{
+    grid-area: Bio2;
+    border: 2px solid black;
+}
+
+.bio3{
+    grid-area: Bio3;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+.bio4{
+    grid-area: Bio4;
+    border: 2px solid black;
+}
+
+.biografia1{
+    background-color: rgb(253, 104, 104);
+    display: flex;
+}
+
+
+.biografia2{
+    background-color: rgb(252, 132, 132);
+    display: flex;
+}
+
+
+.biografia3{
+    background-color: rgb(250, 165, 165);
+    display: flex;
+}
+
+
+.biografia4{
+    background-color: rgb(250, 201, 201);
+    display: flex;
+}
+
+.foto1{
+    background-image: url(./assets/john.webp);
+}
+
+.foto2{
+    background-image: url(./assets/paul.jpg);
+}
+
+.foto3{
+    background-image: url(./assets/ringo.png);
+}
+
+.foto4{
+    background-image: url(./assets/george.jpg);
+}
+
+.foto1, .foto3{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+}
+
+.biografia1, .biografia3{
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+}
+
+.foto2, .foto4{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+}
+
+.biografia2, .biografia4{
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 820px) {
+    .grid-container{
+        width: 500px;
+        height: 1000px;
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "Bio1 Bio1"
+        "Bio2 Bio3"
+        "Bio2 Bio3"
+        "Bio4 Bio4";
+    }
+    .bio1{
+        grid-area: Bio1;
+        flex-direction: row;
+        border: none;
+    }
+
+    .bio2{
+        grid-area: Bio2;
+        flex-direction: column;
+        border: none;
+    }
+
+    .bio3{
+        grid-area: Bio3;
+        flex-direction: column;
+        border: none;
+    }
+
+    .bio4{
+        grid-area: Bio4;
+        flex-direction: row;
+        border: none;
+    }
+
+
+}
